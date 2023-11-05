@@ -8,8 +8,9 @@ See [lens#5714](https://github.com/lensapp/lens/issues/5714)
 
 1. Clone this project inside WSL
 2. `sudo apt install python3 python3-pip python3-venv`
-3. Activate venv with `source venv/bin/activate`
-4. Install dependencies `pip install -r requirements.txt`
+3. Create venv `python3 -m venv venv`
+4. Activate venv with `source venv/bin/activate`
+5. Install dependencies `pip install -r requirements.txt`
 
 ## Usage
 
