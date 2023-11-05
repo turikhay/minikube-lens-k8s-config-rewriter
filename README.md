@@ -1,5 +1,3 @@
-# Minikube-inside-WSL config rewrite
-
 A (very) hacky workaround to allow [Lens](https://k8slens.dev/) to connect to Minikube inside WSL.
 
 See [lens#5714](https://github.com/lensapp/lens/issues/5714)
