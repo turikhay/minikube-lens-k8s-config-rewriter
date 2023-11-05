@@ -42,7 +42,6 @@ def run_shell(cmd: str | list[str]) -> str:
 
 if __name__ == "__main__":
     load_dotenv()
-    src_file = os.path.join(Path.home(), ".kube/config")
     dest_file = os.environ.get("DEST_KUBE_CONFIG")
     print(f"Rewriting config to {dest_file}")
     rewrite_kube_config(
