@@ -21,7 +21,7 @@ See [lens#5714](https://github.com/lensapp/lens/issues/5714)
   <summary>💡 Add this script to your $PATH</summary>
 
 ```shell
-$ ln -s ~/projects/minikube-config-rewriter/minikube-start.sh ~/bin/minikube-start
+$ ln -s minikube-start.sh ~/bin/minikube-start
 ```
   
 </details>
