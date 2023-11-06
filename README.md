@@ -24,6 +24,5 @@ $ ln -s minikube-start.sh ~/bin/minikube-start
 ```
   
 </details>
-<br/>
 
 4. Lens should pick up Minikube cluster
