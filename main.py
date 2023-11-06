@@ -28,12 +28,11 @@ def rewrite_kube_config(src: str, dest_file: str):
 
 def rewrite_path(p: str, to_windows=True) -> str:
     assert isinstance(p, str)
-    return run_shell(["wslpath", "-w" if to_windows else "-u", p])
+    return run_cmd(["wslpath", "-w" if to_windows else "-u", p])
 
-def run_shell(cmd: str | list[str]) -> str:
+def run_cmd(cmd: list[str]) -> str:
     result = run(
         cmd,
-        shell=isinstance(cmd, str),
         capture_output=True,
         text=True, check=True, timeout=5
     )
@@ -45,7 +44,7 @@ if __name__ == "__main__":
     dest_file = os.environ.get("DEST_KUBE_CONFIG")
     print(f"Rewriting config to {dest_file}")
     rewrite_kube_config(
-        run_shell("kubectl config view"),
+        run_cmd(["kubectl", "config", "view"]),
         rewrite_path(dest_file, to_windows=False)
     )
     print("OK")
